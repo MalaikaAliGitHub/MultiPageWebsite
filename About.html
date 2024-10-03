@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-page Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+<body>
+     <nav>
+        <div class="nav">
+            <img src="Logo 1.jpg" alt="">
+            <ul>
+                <a href="Home.html">Home</a>
+                <a href="About.html">About Us</a>
+                <a href="Services.html">Services</a>
+                <a href="Gallery.html">Gallery</a>
+                <a href="Contact.html">Contact Us</a>
+
+                <button id="logIn">Log In</button>
+            </ul>
+
+           
+        </div>
+     </nav>
+
+     <div id="LogClick">
+        <div class="LogInHead">LogIn Page</div>
+       <label for="">Name:</label><br>
+       <input id="LogName" type="text" placeholder="Enter Name:"><br>
+ 
+       <label for="">Email</label><br>
+       <input id="LogEmail" type="email" placeholder="Enter Email:"><br>
+ 
+       <label for="">Password</label><br>
+       <input id="LogPassword" type="text" placeholder="Enter Password:"><br>
+ 
+       <button id="submit">Submit</button>
+ 
+      </div>
+ 
+
+    <div id="AboutPage">
+        <h1>About Us</h1>
+        <div class="pageMain">
+          <img src="AboitPic.webp" alt="">
+     <div class="row1">
+         <img src="row1 pic.webp" alt="">
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis itaque id a placeat sit, rem enim non magni eligendi velit, sapiente tempora ex voluptatem vel, possimus error ullam ducimus officia.</p>
+     </div>
+ 
+ 
+     <div class="row1">
+       
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis itaque id a placeat sit, rem enim non magni eligendi velit, sapiente tempora ex voluptatem vel, possimus error ullam ducimus officia.</p>
+         <img src="Row2 Pics.jpg" alt="">
+     </div>
+ 
+     <div class="row1">
+         <img src="Row3 pic.jpg" alt="">
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis itaque id a placeat sit, rem enim non magni eligendi velit, sapiente tempora ex voluptatem vel, possimus error ullam ducimus officia.</p>
+     </div>
+ 
+        </div>
+      </div>
+
+
+
+      <div class="footer">
+
+        <i id="Github" class="fa-brands fa-github"></i>
+        
+        <i id="LinkedIn" class="fa-brands fa-linkedin"></i>
+            
+        </div> 
+
+
+
+        
+<script>
+    // Login form js
+
+let loginButton = document.getElementById("logIn");
+let logClickDiv = document.getElementById("LogClick");
+document.addEventListener('DOMContentLoaded', () => {
+    loginButton.addEventListener('click', () => {
+        logClickDiv.style.display = "block";
+    });
+});
+
+let submitBtn=document.getElementById("submit");
+submitBtn.addEventListener('click' ,()=>{
+    
+
+})
+
+
+let logName=document.getElementById("LogName");
+let logEmail=document.getElementById("LogEmail");
+let logPassword=document.getElementById("LogPassword");
+
+submitBtn.addEventListener('click' ,()=>{
+    if(logName.value=="" || logEmail.value=="" || logPassword.value==""){
+          alert("Please Give All Information for LogIn Account ");
+    } 
+    else{
+        alert("Thanks! You are successfully Loged In :)");
+        logClickDiv.style.display = "none";
+    }
+})
+
+
+// LinkedIn   https://www.linkedin.com/in/malaika-ali-1015b12b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+
+//Gihub     https://github.com/MalaikaAliGitHub?tab=repositories
+
+let GitIcon=document.getElementById("Github");
+let linked=document.getElementById("LinkedIn");
+
+GitIcon.addEventListener('click' ,()=>{
+    window.open("https://github.com/MalaikaAliGitHub?tab=repositories")
+})
+
+
+linked.addEventListener('click' ,()=>{
+   window.open("https://www.linkedin.com/in/malaika-ali-1015b12b4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app")
+})
+
+
+
+
+
+
+
+        
+</script>     
+                
+</body>
+</html>
